@@ -6,6 +6,7 @@ import { BsCameraReelsFill } from "react-icons/bs";
 import { IoLogIn } from "react-icons/io5";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { NavLink } from 'react-router';
 
 function Navbar() {
     useGSAP(()=>{
@@ -19,9 +20,9 @@ function Navbar() {
     })
   return (
     <>
-    <div className='bg-[#0E232D] font-second w-[100vw] text-white font-extralight flex text-[0.7rem] h-[8vh] justify-around    lg:text-[1rem] lg:h-[9vh] items-center '>
-      <div className='navLinks '>FILMS</div>
-      <div  className='navLinks'>PHOTOS</div>
+    <div className='bg-[#0E232D] font-second w-full text-white font-extralight flex text-[0.7rem] h-[8vh] justify-around    lg:text-[1rem] lg:h-[9vh] items-center '>
+     <NavLink to='/'> <div className='navLinks '>FILMS</div> </NavLink>
+     <NavLink to='/photo'> <div  className='navLinks'>PHOTOS</div></NavLink>
       <div  className='navLinks'>CONTACT</div>
       <div  className='navLinks'>STORE</div>
       <div  className='navLinks'>LOGIN</div>

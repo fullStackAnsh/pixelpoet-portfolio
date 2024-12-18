@@ -1,21 +1,22 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero';
+import Home from './Home';
+import Photo from './Photo';
 import gsap from 'gsap';
-import Belt from './components/Belt';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import VideoBlock from './components/VideoBlock';
+import { Route,Routes } from 'react-router';
 gsap.registerPlugin(ScrollTrigger);
 function App() {
    
   return (
-    
+      
       <div className='overflow-hidden w-[100vw] min-h-[100vh] bg-[#0E232D]'>
       <Navbar />
-      <Hero />
-      <Belt />
-      <VideoBlock />
+     <Routes>
+      <Route path='/' element={<Home />}/>
+      <Route path='/photos' element={<Photo />} />
+     </Routes>
       </div>
       
     
